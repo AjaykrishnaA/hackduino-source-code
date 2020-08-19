@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
   //this code here... fires when app.js loads
   db.collection('todos').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-    setTodos(snapshot.docs.map(doc => doc.data().text))
+    setTodos(snapshot.docs.map(doc => ({id: doc.id, text: doc.data().text})))
   })
   }, [])
   const addTodo = (event) => {
@@ -32,14 +32,14 @@ function App() {
       <form>
         <FormControl>
           <InputLabel>Write a Todo:</InputLabel>
-          <input value={input} onChange={event => setInput(event.target.value)}/>
+          <Input value={input} onChange={event => setInput(event.target.value)}/>
         </FormControl>
         <Button disabled={!input} type='submit' onClick={addTodo} variant="contained" color="primary">Add To Do</Button>
         {/* <button type='submit' onClick={addTodo}>Add To Do</button> */}
       </form>
       <ul>
         {todos.map(todo => (
-          <Todo text={todo}/>
+          <Todo todo={todo}/>
           //<li>{todo}</li>
         ))}
       </ul>
