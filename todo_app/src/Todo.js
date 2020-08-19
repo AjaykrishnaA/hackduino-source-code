@@ -2,7 +2,7 @@ import React from 'react';
 import './Todo.css';
 import db from './firebase'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { List, ListItem, ListItemText, Button } from '@material-ui/core';
+import { List, ListItem, ListItemText } from '@material-ui/core';
 
 function Todo(props) {
     return (
