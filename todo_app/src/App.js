@@ -15,6 +15,9 @@ function App() {
     setTodos(snapshot.docs.map(doc => ({id: doc.id, text: doc.data().text})))
   })
   }, [])
+  // const deleteAll = (event) => {
+  //   db.collection('todos').set('');
+  // }
   const addTodo = (event) => {
     event.preventDefault();
 
@@ -23,20 +26,21 @@ function App() {
       timestamp : firebase.firestore.FieldValue.serverTimestamp()
     })
     
-    setTodos([...todos, input]);
+    // setTodos([...todos, input]);
     setInput('');
   }
   return (
     <div className="App">
-      <h1>Hello Ajay krishna A,</h1>
+      <h1>Hello Ajay krishna A,...😍🎉✨👍👌</h1>
       <form>
         <FormControl>
           <InputLabel>Write a Todo:</InputLabel>
           <Input value={input} onChange={event => setInput(event.target.value)}/>
         </FormControl>
         <Button disabled={!input} type='submit' onClick={addTodo} variant="contained" color="primary">Add To Do</Button>
-        {/* <button type='submit' onClick={addTodo}>Add To Do</button> */}
       </form>
+      {/* <br/>
+      <Button onClick={deleteAll } variant="contained" color="secondary">Delete all</Button> */}
       <ul>
         {todos.map(todo => (
           <Todo todo={todo}/>
