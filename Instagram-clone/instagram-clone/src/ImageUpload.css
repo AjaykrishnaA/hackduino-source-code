@@ -1,0 +1,14 @@
+.imageUpload{
+    margin: 20px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 6px;
+}
+.imageUpload__form{
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.upload__progress{
+    width: 100%;
+}
