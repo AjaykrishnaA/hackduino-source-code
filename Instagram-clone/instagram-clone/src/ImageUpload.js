@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Card } from '@material-ui/core';
 import { db, storage } from './firebase';
 import './ImageUpload.css';
 import firebase from "firebase" ;
@@ -67,16 +67,17 @@ function ImageUpload({username}) {
                     <LinearProgressWithLabel value={progress} />
                 </div>
             ):(null)}
+            <Card className="imageUpload__form">
+                <form>
+                    <input type='file'  onChange={handleChange} />
+                    {image?(
+                        <input type='text' placeholder='Enter a caption...' value={imageCaption} onChange={(event)=> setImageCaption(event.target.value)} />
+                    ):(null)}
+                    
+                    <Button type='submit' variant="contained" color="primary" onClick={uploadPost} >Post</Button>
+                </form>
+            </Card>
             
-            {/* <progress value={progress} max='100' className="upload__progress" ></progress> */}
-            <form className="imageUpload__form">
-                <input type='file'  onChange={handleChange} />
-                {image?(
-                    <input type='text' placeholder='Enter a caption...' value={imageCaption} onChange={(event)=> setImageCaption(event.target.value)} />
-                ):(null)}
-                 
-                <Button type='submit' onClick={uploadPost} >Post</Button>
-            </form>
         </div>
     )
 }

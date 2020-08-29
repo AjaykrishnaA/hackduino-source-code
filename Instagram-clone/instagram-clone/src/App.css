@@ -3,13 +3,15 @@
 } */
 
 .app {
-  margin-top: 80px !important;
-  background-color: #fafafa;
-  height:100vh ;
+  margin-top: 55px !important;
+  background-color: #f3eded;
+  /* height:100vh ; */
 }
+
 .br { 
   display: block; 
-  margin-bottom: 0em; 
+  margin-top: 0px !important; 
+  margin-bottom: 0px; 
 }
 
 .app__hiUser{
@@ -34,4 +36,8 @@
 .app_signup{
   display: flex;
   flex-direction: column;
+}
+
+.app__loginContainer{
+  display: flex;
 }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import Post from './Post';
 import { auth, db } from './firebase';
-import { Modal, makeStyles, Button, Input } from '@material-ui/core';
 import ImageUpload from './ImageUpload';
+import './App.css';
+import { Modal, makeStyles, Button, Input, Avatar } from '@material-ui/core';
+import './Post.css';
  
 function App() {
   
@@ -84,10 +85,10 @@ function App() {
   useEffect(() => {
     db.collection('posts').orderBy('timestamp',"desc").onSnapshot(snapshot=>{
       setPosts(snapshot.docs.map(doc=>(
-        // {
-        //   id:doc.id, post:
-          doc.data()
-        // }
+        {
+          id: doc.id, 
+          post: doc.data()
+        }
         )));
     })
    
@@ -99,7 +100,11 @@ function App() {
       <header className="app__header">
         <img alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.3MOJ5UxDdPuMzy6Pwuzt-QHaCp%26pid%3DApi&f=1" height='40px'  ></img>
         {user? (
-            <Button onClick={()=> auth.signOut()} >Log Out</Button>
+          <div className="app__loginContainer"> 
+            <Button variant="contained" onClick={()=> auth.signOut()} >Log Out</Button>
+            <Avatar className="post__avatar" alt={username} src="https://firebasestorage.googleapis.com/v0/b/instagram-clone-15d14.appspot.com/o/Screenshot_2019-12-05-10-44-19-970_com.miui.gallery.jpg?alt=media&token=d0a10f95-cc20-4577-83bb-31f7d906631a" />
+          </div>
+
         ): (
           <div className="app__loginContainer" >
             <Button onClick={()=> setOpenSignIn(true)} >Sign In</Button>
@@ -177,8 +182,7 @@ function App() {
 
       {user?.displayName ? (
         <> 
-          <h2 className="app__hiUser" >Hi {user.displayName}, <span className="br"><h5>Start to upload new posts</h5></span> </h2>
-          <ImageUpload username={user.displayName} />
+          <h2 className="app__hiUser" >Hi {user.displayName}, <span className="br"><h5>Start snapshotting your life moments...</h5></span> </h2>
         </>
       ): (
         <center>
@@ -188,10 +192,10 @@ function App() {
       
 
     {
-      posts.map(post=>
+      posts.map(({id,post})=>
         <Post 
-          // key={post.id}
-          // id={post.id}
+          key={id}
+          id={id}
           username={post.username}
           imageUrl={post.imageUrl}
           caption={post.caption}
@@ -199,11 +203,19 @@ function App() {
           />
       )
     }
-    {
-      console.log({username})
-    }
+    {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ): (
+        <center>
+          <h3>Log in to upload</h3>
+        </center>
+      )}
+      <center>
+        <h4>OOOOOOOOOOOOOOOOOOO</h4>
+      </center>
+
     </div>
   );
 }
 
-export default App;
+export default App ;

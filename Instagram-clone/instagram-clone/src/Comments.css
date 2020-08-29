@@ -1,0 +1,23 @@
+.comments{
+    padding: 10px;
+    border-top: 1px solid lightgray ;
+    background-color:whitesmoke ;
+}
+
+.comments__input{
+    display: flex; 
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.comments__comment{
+    flex: 1;
+}
+
+.comments__post{
+    flex: 0;
+}
+
+.comments__list{
+    margin: 0;
+}

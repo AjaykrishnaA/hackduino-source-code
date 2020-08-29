@@ -1,12 +1,23 @@
 .imageUpload{
-    margin: 20px;
+    /* margin: 0px; */
     border: 1px solid lightgray;
     padding: 10px;
     border-radius: 6px;
     object-fit: contain;
+    bottom: 0; 
+    z-index: 1;
+    background-color: #fafafa;
+    width:  100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    /* transform: translate(+30%, 0); */
 }
 .imageUpload__form{
+    margin-left: 30%;
+    margin-right: 30%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 10px;
+    justify-content: space-between !important;
 }
