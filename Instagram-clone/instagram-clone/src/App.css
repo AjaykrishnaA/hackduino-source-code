@@ -3,8 +3,17 @@
 } */
 
 .app {
+  margin-top: 80px !important;
   background-color: #fafafa;
   height:100vh ;
+}
+.br { 
+  display: block; 
+  margin-bottom: 0em; 
+}
+
+.app__hiUser{
+  text-align: center;
 }
 
 .app__header{
@@ -14,7 +23,11 @@
   display: flex;
   padding: 10px;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
 
 }
 

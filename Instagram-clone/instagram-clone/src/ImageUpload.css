@@ -3,12 +3,10 @@
     border: 1px solid lightgray;
     padding: 10px;
     border-radius: 6px;
+    object-fit: contain;
 }
 .imageUpload__form{
-    /* display: flex; */
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-
-.upload__progress{
-    width: 100%;
 }

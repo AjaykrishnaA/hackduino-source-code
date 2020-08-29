@@ -42,7 +42,8 @@ function App() {
       if(authUser){
         //user logged in...
         setUser(authUser);
-        console.log(authUser);
+        setUsername(authUser.displayName);
+        // console.log(authUser);
       }else{
         setUser(null);
         //user has logged out...
@@ -66,6 +67,7 @@ function App() {
     })
     .catch((error)=> alert(error.message));
     setOpen(false);
+    // setUsername(user.displayName);
   }
 
   const signIn = (event)=> {
@@ -74,13 +76,13 @@ function App() {
     .signInWithEmailAndPassword(email, password)
     .catch((error)=> alert(error.message));
     setOpenSignIn(false);
-
+    // setUsername(user.displayName);
   }
   const [modalStyle] = React.useState(getModalStyle);
   const classes = useStyles();
 
   useEffect(() => {
-    db.collection('posts').onSnapshot(snapshot=>{
+    db.collection('posts').orderBy('timestamp',"desc").onSnapshot(snapshot=>{
       setPosts(snapshot.docs.map(doc=>(
         // {
         //   id:doc.id, post:
@@ -170,13 +172,19 @@ function App() {
         </Modal>
       </header>
 
+      {/* {user.displayName? && 
+        } */}
+
       {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
+        <> 
+          <h2 className="app__hiUser" >Hi {user.displayName}, <span className="br"><h5>Start to upload new posts</h5></span> </h2>
+          <ImageUpload username={user.displayName} />
+        </>
       ): (
         <center>
           <h3>Log in to upload</h3>
         </center>
-      )};
+      )}
       
 
     {
@@ -186,19 +194,14 @@ function App() {
           // id={post.id}
           username={post.username}
           imageUrl={post.imageUrl}
-          // caption={post.post.caption}
-          caption="wow"  
+          caption={post.caption}
+            
           />
       )
     }
     {
       console.log({username})
     }
-
-      {/* <Post username="Ajay" imageUrl="https://www.edigitalagency.com.au/wp-content/uploads/new-instagram-logo-png-transparent-750x749.png" caption="Wow"  />
-      <Post username="Ajay" imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.L0jFq7rB8CVvAqmb_DOa2wHaDr%26pid%3DApi&f=1" caption="Beautiful"  />
-      <Post username="Ajay" imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.As479pqr7ynI8Y1vSf4X7AHaEZ%26pid%3DApi&f=1" caption="Wow"  />
-      <Post username="Ajay" imageUrl="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNlSRMYHUZUs%2Fmaxresdefault.jpg&f=1&nofb=1" caption="Wow"  /> */}
     </div>
   );
 }
