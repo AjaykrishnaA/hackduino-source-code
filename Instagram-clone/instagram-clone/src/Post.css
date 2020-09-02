@@ -22,6 +22,14 @@
     margin-left: 10px;
 }
 
+.post__username{
+    flex: 1;
+}
+
+.post__deleteIcon{
+    flex:0;
+}
+
 .post__image{
     max-width:100% !important;
     height: auto;

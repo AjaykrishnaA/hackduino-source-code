@@ -54,15 +54,19 @@ function Comments({ id}) {
     }
     return (
         <div className="comments" >
+          {user && (
             <form className="comments__input" >
-                <Input className="comments__comment" value={comment} onChange={(e)=> setComment(e.target.value)} placeholder="Post a comment..."></Input>
-                <Button type="submit" className="comments__post" variant="contained" color="primary" onClick={postComment} >Post</Button>
+              <Input className="comments__comment" value={comment} onChange={(e)=> setComment(e.target.value)} placeholder="Post a comment..."></Input>
+              <Button type="submit" className="comments__post" variant="contained" color="primary" onClick={postComment} >Post</Button>
             </form>
+          )}
+          {commentsList!==[] &&
             <div className="comments__list" >
-                {commentsList.map(comment=>
-                    <ul>{comment.username}: {comment.comment}</ul>)}
+              {commentsList.map(comment=>
+                  <ul>{comment.username}: {comment.comment}</ul>)}
+            </div>          
+          }
 
-            </div>
         </div>
     )
 }

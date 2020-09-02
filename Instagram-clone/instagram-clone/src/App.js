@@ -3,7 +3,7 @@ import Post from './Post';
 import { auth, db } from './firebase';
 import ImageUpload from './ImageUpload';
 import './App.css';
-import { Modal, makeStyles, Button, Input, Avatar } from '@material-ui/core';
+import { Modal, makeStyles, Button, Input, Avatar, Tooltip } from '@material-ui/core';
 import './Post.css';
  
 function App() {
@@ -102,7 +102,9 @@ function App() {
         {user? (
           <div className="app__loginContainer"> 
             <Button variant="contained" onClick={()=> auth.signOut()} >Log Out</Button>
-            <Avatar className="post__avatar" alt={username} src="https://firebasestorage.googleapis.com/v0/b/instagram-clone-15d14.appspot.com/o/Screenshot_2019-12-05-10-44-19-970_com.miui.gallery.jpg?alt=media&token=d0a10f95-cc20-4577-83bb-31f7d906631a" />
+            <Tooltip arrow className="" title={username} >
+              <Avatar className="post__avatar" alt={username} src="/static/images/avatar/1.jpg" />
+            </Tooltip>
           </div>
 
         ): (
@@ -196,7 +198,7 @@ function App() {
         <Post 
           key={id}
           id={id}
-          username={post.username}
+          postUsername={post.username}
           imageUrl={post.imageUrl}
           caption={post.caption}
             
