@@ -66,12 +66,10 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">I'm {name}.</h1>
-            {/* <Typing> */}
-            <span>
-              <h3>
-                I'm a {city} based <span>{occupation}</span>. {description}.
-              </h3>
-            </span>
+            {/* <Typing speed={50} startDelay={1000}> */}
+            <h3>
+              I'm a {city} based <span>{occupation}</span>. {description}.
+            </h3>
             {/* </Typing> */}
             <hr />
             <ul className="social">{networks}</ul>

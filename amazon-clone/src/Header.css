@@ -1,0 +1,72 @@
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header_amazonLogo {
+  height: 35px;
+  flex: 0;
+  margin: 0 20px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.header_search {
+  display: flex;
+  padding: 2px;
+  padding-left: 10px !important;
+  flex: 1;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.header_searchInput {
+  flex: 1;
+  border-radius: 5px 0 0 5px;
+  height: 28px !important;
+}
+
+.header_searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #f3a847;
+  object-fit: contain;
+  border-radius: 0 5px 5px 0;
+}
+
+.header_nav {
+  margin-left: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header_option {
+  padding: 7px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header_optionLineOne {
+  font-size: 10px;
+}
+
+.header_optionLineTwo {
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+.header_optionBasket {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header_BasketCount {
+  margin-left: 10px;
+}
