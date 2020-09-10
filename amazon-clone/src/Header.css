@@ -41,7 +41,7 @@
 
 .header_nav {
   margin-left: 20px;
-  color: #ffffff;
+  color: #ffffff !important;
   display: flex;
   justify-content: space-evenly;
 }
@@ -50,6 +50,8 @@
   padding: 7px 10px;
   display: flex;
   flex-direction: column;
+  /* text-decoration: none !important;
+  background-color: none;*/
 }
 
 .header_optionLineOne {
