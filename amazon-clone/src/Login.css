@@ -39,6 +39,7 @@
   margin-bottom: 10px;
   background-color: #fff;
   width: 98%;
+  border-radius: 3px;
 }
 
 .login__container > p {

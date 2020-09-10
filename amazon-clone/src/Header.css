@@ -53,6 +53,13 @@
   /* text-decoration: none !important;
   background-color: none;*/
 }
+.header_nav a :hover {
+  border: 2px solid white;
+  border-radius: 7px;
+}
+.header_option :hover {
+  border: none !important;
+}
 
 .header_optionLineOne {
   font-size: 10px;

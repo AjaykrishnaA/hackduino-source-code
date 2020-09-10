@@ -4,7 +4,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
-import { getBasketTotal } from "./reducer";
 import { auth } from "./firebase";
 
 function Header() {
@@ -35,7 +34,7 @@ function Header() {
         >
           <div onClick={handleAuthentication} className="header_option">
             <span className="header_optionLineOne">
-            Hello {user ? user.email : "Guest"}
+              Hello {user ? user.email : "Guest"}
             </span>
             <span className="header_optionLineTwo">
               {user ? "Sign Out" : "Sign In"}
@@ -51,12 +50,14 @@ function Header() {
           <span className="header_optionLineTwo">Prime</span>
         </div>
         <div className="header_optionBasket">
-          <Link to="/checkout" style={{ color: "white" }}>
+          <Link
+            to="/checkout"
+            style={{ color: "white" }}
+          >
             <ShoppingBasketIcon />
           </Link>
           <span className="header_optionLineTwo header_BasketCount">
-            $ {getBasketTotal(basket)}
-            {/* {basket.length} */}
+            {basket.length}
           </span>
         </div>
       </div>
