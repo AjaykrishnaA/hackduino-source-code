@@ -14,6 +14,7 @@ function Home() {
         <div className="home__row">
           <Product
             id="1"
+            key="1"
             title="The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses"
             price="29.99"
             rating="4"
@@ -21,6 +22,7 @@ function Home() {
           />
           <Product
             id="2"
+            key="2"
             title="Bose QuietComfort 35 II Wireless Bluetooth Headphones, Noise-Cancelling, with Alexa voice control - Black"
             price="349.99"
             rating="3"
@@ -30,6 +32,7 @@ function Home() {
         <div className="home__row">
           <Product
             id="3"
+            key="3"
             title="Apple iPhone XS Max, 64GB, Silver - Fully Unlocked (Renewed)"
             price="589.97"
             rating="5"
@@ -37,6 +40,7 @@ function Home() {
           />
           <Product
             id="4"
+            key="4"
             title="Echo Dot (3rd Gen) - Smart speaker with Alexa - Charcoal"
             price="49.99"
             rating="4"
@@ -44,6 +48,7 @@ function Home() {
           />
           <Product
             id="5"
+            key="5"
             title="Xiaomi Mi Band 4 AMOLED Color Screen Wristband BT5.0 Fitness Tracker Smart Wristbands (Black)"
             price="33.99"
             rating="3"
@@ -53,6 +58,7 @@ function Home() {
         <div className="home__row">
           <Product
             id="6"
+            key="6"
             title="Samsung BET-H Series 43 inch 4K PRO TV UHD + HDR (LH43BETHLGFXGO)"
             price="346.89"
             rating="4"
