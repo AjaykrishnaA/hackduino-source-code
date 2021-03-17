@@ -31,7 +31,7 @@ function Header() {
         <Link
           to={!user && "/login"}
           style={{ textDecoration: "none", color: "white" }}
-        >
+        > 
           <div onClick={handleAuthentication} className="header_option">
             <span className="header_optionLineOne">
               Hello {user ? user.email : "Guest"}
@@ -41,19 +41,21 @@ function Header() {
             </span>
           </div>
         </Link>
-        <div className="header_option">
-          <span className="header_optionLineOne">Returns</span>
-          <span className="header_optionLineTwo">& Orders</span>
-        </div>
+        <Link
+          to={user && "/orders"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          <div className="header_option">
+            <span className="header_optionLineOne">Returns</span>
+            <span className="header_optionLineTwo">& Orders</span>
+          </div>
+        </Link>
         <div className="header_option">
           <span className="header_optionLineOne">Your</span>
           <span className="header_optionLineTwo">Prime</span>
         </div>
         <div className="header_optionBasket">
-          <Link
-            to="/checkout"
-            style={{ color: "white" }}
-          >
+          <Link to="/checkout" style={{ color: "white" }}>
             <ShoppingBasketIcon />
           </Link>
           <span className="header_optionLineTwo header_BasketCount">

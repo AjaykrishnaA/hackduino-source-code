@@ -1,5 +1,5 @@
 .header {
-  height: 50px;
+  height: 55px;
   display: flex;
   align-items: center;
   background-color: #000000;
@@ -50,10 +50,9 @@
   padding: 7px 10px;
   display: flex;
   flex-direction: column;
-  /* text-decoration: none !important;
-  background-color: none;*/
 }
-.header_nav a :hover {
+
+.header_nav a :hover:not(.active) {
   border: 2px solid white;
   border-radius: 7px;
 }

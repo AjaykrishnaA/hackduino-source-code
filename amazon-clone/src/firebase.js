@@ -1,5 +1,5 @@
-
 import firebase from "firebase" ;
+
 const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyBSj4txREr0Tq5zKDP0T1JwU2-1I80vJ4k",
     authDomain: "clone-6fa72.firebaseapp.com",
@@ -13,6 +13,5 @@ const firebaseApp = firebase.initializeApp({
 
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
-const storage = firebaseApp.storage();
 
-export  { auth, storage, db } ; 
+export  { auth, db } ; 

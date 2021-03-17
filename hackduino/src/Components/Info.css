@@ -1,0 +1,70 @@
+* {
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.info {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  margin: 0 auto !important ;
+  background-color: transparent;
+  overflow: hidden;
+  align-items: center;
+  font-size: 1.5em;
+  justify-content: center;
+  background-image: url(../images/bg/posterNO1.png);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.info div {
+  padding: 3vh;
+}
+.info div div {
+  -moz-transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.info div div:hover {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.info_1 {
+  margin: 0; /*
+  background-image: url(../images/bg/AD21.png);
+  background-size: 100%;
+  background-attachment: fixed;*/
+  align-items: center;
+  text-align: left;
+}
+.info_2 {
+  /*
+  background-image: url(../images/bg/posterNO1.png);
+  background-size: 100%;
+  background-attachment: fixed;*/
+  align-items: center;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+  min-height: 30vh;
+}
+
+.img {
+  width: 100vw;
+  height: auto;
+}
+
+.section_heading {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0vh;
+  font-family: "Courier New", Courier, monospace;
+  transition: 1s;
+  transform-origin: left;
+}
+
+.button_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+}

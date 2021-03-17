@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: monospace, serif;
+  background-image: url(https://media.wired.com/photos/5cdef92d38916b321aa0c474/master/pass/Facebook-Robots-00.jpg);
+  background-size: cover;
+  height: 200px;
+  background-repeat: no-repeat;
+}

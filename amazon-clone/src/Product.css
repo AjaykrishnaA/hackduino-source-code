@@ -11,6 +11,11 @@
   object-fit: contain;
   background-color: white;
   z-index: 1;
+  border-radius: 2%;
+}
+.product:hover {
+  transform: scale(1.005);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 .product > img {
@@ -26,6 +31,10 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  transition: border-color 0s;
+}
+.product > button:hover {
+  transform: scale(1.1);
 }
 
 .product__price {
@@ -36,3 +45,7 @@
   height: 100%;
   margin-bottom: 15px;
 }
+
+/* button:focus {
+  border: 2px solid red;
+} */
