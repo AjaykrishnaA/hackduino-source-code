@@ -1,17 +1,18 @@
 import React from 'react';
 import './Banner.css';
+import Buttons from './Buttons';
 
 function Banner() {
     return (
         <>
             <section className='banner' >
                 <div className="banner_text">
+                    <h6>Interested to build something?</h6>
                     <h1>Hack-duino</h1>
-                    <h4>Save the date: 27 March 2021, Arduino Day😍</h4>
+                    <h6>A hackathon on the celebration of Arduino Day😍</h6>
+                    <Buttons />
                 </div>
-                <div className='text_bg' >
-
-                </div>
+                <div className='text_bg' ></div>
             </section>
         </>
     )

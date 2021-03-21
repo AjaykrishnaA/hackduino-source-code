@@ -2,6 +2,9 @@
   align-items: center;
   font-family: "Courier New", Courier, monospace;
 }
+.b {
+  font-weight: bolder;
+}
 
 .info {
   color: rgb(0, 0, 0);
@@ -18,7 +21,8 @@
 }
 
 .info div {
-  padding: 3vh;
+  padding: 2vmax;
+  font-weight: 500;
 }
 .info div div {
   -moz-transition: 0.2s ease;

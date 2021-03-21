@@ -12,17 +12,17 @@ function Info() {
                     <h2 className='section_heading' >What is “Hack-duino”?</h2> <hr /><br />
                     <ul>
                         <li>
-                            Hack-duino is a hackathon, seeking ideas to utilize the power of robotics (small and big scale) for dealing with post disaster scenarios (such as after cyclones – particularly in eastern India).
+                            Hack-duino is a hackathon, seeking ideas to utilize the power of robotics (small and big scale) for dealing with post disaster scenarios.
                         </li><br />
                         <li>
                             Hackathon will be held in 2 stages:
                             <ul>
                                 
-                                <p style={{marginLeft:"2.5em"}}><li><strong><u>Stage 1</u></strong>: Idea submission in form of a pdf. 5 participations will be qualified for next stage.</li></p>
+                                <p style={{marginLeft:"1em"}}><li><b>Stage 1</b>: Idea submission in form of a pdf. 5 participations will be qualified for next stage.</li></p>
                                 
                                 
-                                <p style={{marginLeft:"2.5em"}}><li><strong><u>Stage 2</u></strong> :A Descriptive video of the idea – preferably something involving a demonstrative model (Not mandatory though) Top 3 entries will be selected and awarded. The best idea gets a special recognition in the form of a collaboration with Dr. Subhankar Mishra’s Lab, School of Computer Sciences, NISER (Bhubaneswar). <br /><br />
-                                <strong>Dr. Mishra’s Lab will support the people submitting the best idea and together we will develop the said idea and see the future prospects of the model.</strong></li></p><br />
+                                <p style={{marginLeft:"1em"}}><li><b>Stage 2</b> :A Descriptive video of the idea – preferably something involving a demonstrative model (Not mandatory though) Top 3 entries will be selected and awarded. The best idea gets a special recognition in the form of a collaboration with Dr. Subhankar Mishra’s Lab, School of Computer Sciences, NISER (Bhubaneswar). <br /><br />
+                                <b>Dr. Mishra’s Lab will support the people submitting the best idea and together we will develop the said idea and see the future prospects of the model.</b></li></p><br />
                                 
                                 
                             </ul>
