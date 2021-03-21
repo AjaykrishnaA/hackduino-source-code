@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import ScrollOut from "scroll-out";
 
 ScrollOut({
-    targets: '.section_heading,.info_1, .info_2, .info_3,.button_div,.text'
+    targets: '.section_heading, .info_1, .info_2, .info_3, .button_div, .text'
 });
 
 function Info() {
