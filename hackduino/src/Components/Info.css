@@ -2,9 +2,6 @@
   align-items: center;
   font-family: "Courier New", Courier, monospace;
 }
-.b {
-  font-weight: bolder;
-}
 
 .info {
   color: rgb(0, 0, 0);
@@ -20,16 +17,19 @@
   background-attachment: fixed;
 }
 
-.info div {
-  padding: 2vmax;
-  font-weight: 500;
+.info > div {
+  padding: 3vmax;
 }
-.info div div {
-  -moz-transition: 0.2s ease;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
+.info_1[data-scroll],
+.info_2[data-scroll],
+.info_3[data-scroll] {
+  -moz-transition: 1s ease;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
-.info div div:hover {
+.info_1[data-scroll="in"],
+.info_2[data-scroll="in"],
+.info_3[data-scroll="in"] {
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
@@ -39,7 +39,6 @@
   background-size: 100%;
   background-attachment: fixed;*/
   align-items: center;
-  text-align: left;
 }
 .info_2 {
   /*
@@ -47,7 +46,6 @@
   background-size: 100%;
   background-attachment: fixed;*/
   align-items: center;
-  text-align: left;
   font-family: "Courier New", Courier, monospace;
   min-height: 30vh;
 }
@@ -62,13 +60,37 @@
   text-align: center;
   padding: 0vh;
   font-family: "Courier New", Courier, monospace;
-  transition: 1s;
-  transform-origin: left;
+}
+.section_heading[data-scroll] {
+  transition: 0.3s ease;
+  transform: scaleX(0);
 }
 
+.section_heading[data-scroll="in"] {
+  transform: scaleX(1);
+}
 .button_div {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100%;
+  margin: 0;
+  padding: 2vmax 0 0 0;
+}
+.button_div[data-scroll] {
+  transition: 0.3s ease;
+  transform: scaleX(0);
+}
+
+.button_div[data-scroll="in"] {
+  transform: scaleX(1);
+}
+
+.text[data-scroll] {
+  transition: 0.3s ease;
+  transform: scaleX(0);
+}
+
+.text[data-scroll="in"] {
+  transform: scaleX(1);
 }

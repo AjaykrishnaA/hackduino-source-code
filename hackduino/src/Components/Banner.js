@@ -1,6 +1,6 @@
 import React from 'react';
 import './Banner.css';
-import Buttons from './Buttons';
+import Buttons from './Buttons.js';
 
 function Banner() {
     return (
