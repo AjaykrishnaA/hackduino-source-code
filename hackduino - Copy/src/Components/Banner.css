@@ -17,6 +17,30 @@
   height: 30vh; /**/
 }
 
+.banner_header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.625);
+  padding: 10px;
+}
+.banner_header_image {
+  border-right: 2px solid blue;
+}
+.banner_header_text {
+  padding-left: 10px;
+}
+.lab_heading {
+  font-size: 3vw;
+}
+.scps_heading {
+  font-size: 5vw;
+}
+
 @media (max-width: 768px) {
   .banner {
     width: 100%;
@@ -27,7 +51,7 @@
 .text_bg {
   background-color: rgba(176, 159, 175, 0.625);
   width: 100%;
-  height: 70%;
+  height: 100%;
   position: absolute;
   top: 15%;
   z-index: 1;
@@ -49,69 +73,11 @@
   width: 100%;
 }
 
-.heading_before {
-  animation: fadeAndScale 2s ease-in-out;
-}
-
-@keyframes fade_left {
-  0% {
-    /*opacity: 0;
-    font-size: 0;*/
-    margin-left: -50%;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-@keyframes fadeAndScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9, 0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
-}
-
-.heading_after {
-  opacity: 0;
-  animation: fadeAndScale 2s 4s ease-in-out forwards;
-}
-
-.line-1 {
-  margin: 0 auto;
-  border-right: 2px solid rgba(0, 0, 0, 0.75);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-}
 h1 {
   font-size: 8.5vmin;
   font-family: "Press Start 2P", cursive;
+  color: rgb(0, 0, 0);
   mix-blend-mode: difference;
-  border-right: 2px solid;
-}
-/* Animation */
-.anim-typewriter {
-  animation: typewriter 2s steps(10) 2s 1 normal both,
-    blinkTextCursor 500ms steps(10) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 85vmin;
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(0, 0, 0, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
 }
 
 .banner_button_div {

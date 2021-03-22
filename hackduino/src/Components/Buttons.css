@@ -3,4 +3,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  animation: button_fade 2s 6s ease-in-out backwards;
+}
+@keyframes button_fade {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }
